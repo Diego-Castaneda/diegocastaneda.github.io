@@ -6,10 +6,13 @@
 
 <header>
 	<div class="corner">
+		<a href="/"><h1>Diego Castaneda</h1></a>
+	</div>
+	<!-- <div class="corner">
 		<a href="https://kit.svelte.dev">
 			<img src={logo} alt="SvelteKit" />
 		</a>
-	</div>
+	</div> -->
 
 	<nav>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
@@ -24,6 +27,9 @@
 			</li>
 			<li aria-current={$page.url.pathname.startsWith('/sverdle') ? 'page' : undefined}>
 				<a href="/sverdle">Sverdle</a>
+			</li>
+			<li aria-current={$page.url.pathname === '/home' ? 'page' : undefined}>
+				<a href="/home">Homie</a>
 			</li>
 		</ul>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
@@ -44,10 +50,10 @@
 		justify-content: space-between;
 	}
 
-	.corner {
+	/* .corner {
 		width: 3em;
 		height: 3em;
-	}
+	} */
 
 	.corner a {
 		display: flex;
@@ -57,11 +63,11 @@
 		height: 100%;
 	}
 
-	.corner img {
+	/* .corner img {
 		width: 2em;
 		height: 2em;
 		object-fit: contain;
-	}
+	} */
 
 	nav {
 		display: flex;
