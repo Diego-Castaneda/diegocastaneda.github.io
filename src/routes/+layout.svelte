@@ -1,18 +1,23 @@
 <script>
 	import Header from './Header.svelte';
+	import Footer from './Footer.svelte';
 	import '$lib/scss/styles.css';
 </script>
 
 <div class="app">
 	<Header />
 
-	<main>
+	<main style="background-color: white;">
+		<h2>Some Secondary Text</h2>
 		<slot />
 	</main>
 
-	<footer>
+	<Footer />
+
+	<!-- <footer>
 		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-	</footer>
+	</footer> -->
+
 </div>
 
 <style>
