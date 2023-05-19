@@ -1,6 +1,6 @@
 <script>
-    import GithubIcon from './github.svelte';
-    import LinkedinIcon from './linkedin.svelte';
+    import GithubIcon from '../icons/github.svelte';
+    import LinkedinIcon from '../icons/linkedin.svelte';
 </script>
 
 <div class="socials">
