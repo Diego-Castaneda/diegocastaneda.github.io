@@ -1,16 +1,22 @@
 <script>
 	import { page } from '$app/stores';
-	import logo from '$lib/images/svelte-logo.svg';
-	import github from '$lib/images/github.svg';
 	import ThemeToggle from './ThemeToggle.svelte';
+	import Menu from '$lib/icons/menu-outline.svelte';
+
 </script>
 
 <header>
+	<div class="top-height"></div>
 	<div class="container flex-row">
 		<div class="logo">
 			<a href="/"><h1>Diego Castaneda</h1></a>
 		</div>
-		<nav>
+
+		<nav class="mobile-only-nav">
+			<Menu></Menu>
+		</nav>
+
+		<nav class="desktop-nav">
 			<ul class="page-links">
 				<li><a href="#">Latest</a></li>
 				<li><a href="#">Notes</a></li>
@@ -18,23 +24,31 @@
 					<a href="/home">Homie</a>
 				</li>
 			</ul>
+
 			<div class="links">
 				<ThemeToggle />
 			</div>
-
 		</nav>
 	</div>	
+	<div class="bottom-height"></div>
 </header>
 
 <style>
 	header {
-		/* display: flex;
-		justify-content: space-between; */
 		background-color: var(--color-bg-1);
 	}
 
-	.page-links {
-		margin-right: auto;
+	.top-height {
+		background-color: var(--color-bg-1);
+		width: 100%;
+		height: 30px;
+		visibility: hidden;
+		position: absolute;
+	}
+
+	.bottom-height {
+		width: 100%;
+		height: 90px;
 	}
 
 	.flex-row {
@@ -51,17 +65,21 @@
 		margin-right: 2rem;
 	}
 
+	.mobile-only-nav {
+		width: 30px;
+		height: 30px;
+		margin-left: auto;
+	}
+
+	.desktop-nav {
+		display: none;
+	}
+
 	.links {
+		margin-left: auto;
 		display: flex;
 		align-items: center;
 	}
-	/* .corner a {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 100%;
-		height: 100%;
-	} */
 
 	nav {
 		display: flex;
@@ -109,5 +127,20 @@
 
 	a:hover {
 		color: var(--color-theme-1);
+	}
+
+	@media (min-width: 615px) {
+		.mobile-only-nav {
+			display: none;
+		}
+		
+		.desktop-nav {
+			display: contents;
+		}	
+		
+		.top-height {
+			visibility: visible;
+			position: static;
+		}
 	}
 </style>
