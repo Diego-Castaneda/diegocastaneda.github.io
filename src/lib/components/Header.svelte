@@ -2,6 +2,7 @@
 	import { page } from '$app/stores';
 	import ThemeToggle from './ThemeToggle.svelte';
 	import Menu from '$lib/icons/menu-outline.svelte';
+	import Wave from '$lib/components/wave.svelte';
 
 </script>
 
@@ -31,11 +32,13 @@
 		</nav>
 	</div>	
 	<div class="bottom-height"></div>
+	<Wave />
 </header>
 
 <style>
 	header {
 		background-color: var(--color-bg-1);
+		margin-right: 0;
 	}
 
 	.top-height {
