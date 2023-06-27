@@ -1,8 +1,8 @@
 <script>
 	import { page } from '$app/stores';
-	import ThemeToggle from './ThemeToggle.svelte';
 	import Wave from '$lib/components/wave.svelte';
 	import NavBar from '$lib/components/NavBar.svelte';
+
 </script>
 
 <header>
@@ -40,6 +40,7 @@
 		display: flex;
 		justify-content: start;
 		margin-right: 1rem;
+		min-width: 265px;
 	}
 
 	@media (min-width: 615px) {
