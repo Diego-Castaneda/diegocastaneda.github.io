@@ -27,13 +27,13 @@
 	.top-height {
 		background-color: var(--color-bg-1);
 		width: 100%;
-		height: 30px;
+		height: 50px;
 		visibility: hidden;
 	}
 
 	.bottom-height {
 		width: 100%;
-		height: 90px;
+		height: 200px;
 	}
 
 	.logo {
